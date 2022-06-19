@@ -63,7 +63,7 @@ while (cap.isOpened()):
 
                 # The x and y variables below depend upon the size of the detected face.
                 x -= 0.26 * overlay_glasses.shape[1]
-                y += 0.85 * overlay_glasses.shape[0]
+                y += 1.05 * overlay_glasses.shape[0]
 
                 # Slice the height, width of the overlay image.
                 h, w = overlay_glasses.shape[:2]
@@ -84,7 +84,7 @@ while (cap.isOpened()):
         continue
 
     cv2.imshow('frame', frame)
-    # GRAVAR!
+    # RECORD ON IT!
     # out.write(frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
